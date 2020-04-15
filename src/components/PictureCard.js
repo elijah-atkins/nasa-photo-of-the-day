@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 
 const PictureCard = pic => {
-    var dateStr = pic.pic.date;
-
-    const months = ["January", "Febuary", "Marh", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     const [hide, setHide] = useState(true);
     const getDate = (num) => {
         if (num === 1) {
