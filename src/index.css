@@ -1,4 +1,6 @@
 body {
+
+  background-image: linear-gradient(141deg, #25252b 0%, #141830 51%, #0b082e 75%);
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -20,49 +22,91 @@ code {
   margin: 0;
 }
 h1 {
-  color: black;
-  font-size: 50px;
+  color: #fafe7f;
+  font-size: 3rem;
   text-align: center;
   margin: 0;
+  padding: 2rem;
 }
-.logo_container {
+.logo-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(225, 225, 225, 0.5);
+  background: rgba(225, 225, 225, 0.01);
 }
 .logo {
   width: 85vw;
 }
-h2 {
-  color: #474747;
-  font-size: 25px;
-  background: #2eb29a;
-  margin: 0;
+.app-card {
+  display: flex;
+  align-content: center;
+}
+.picture-date {
+  font-weight: bold;
   padding: 10px;
+}
+.picture-container {
+  margin-left: 5vw;
+  margin-top: 2vw;
+  width: 90vw;
+  background: #c2c3d3;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 6px 6px 9px 8px rgba(255, 255, 255, 0.05), 0 15px 12px rgba(255, 147, 251, 0.07);
+}
+.picture-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+h2 {
+  color: #e5f285;
+  font-size: 2rem;
+  background: #383652;
+  margin: 0;
+  padding: 20px;
+}
+.picture-img {
+  display: flex;
+  justify-content: center;
 }
 .picture {
   display: grid;
   max-width: 90vw;
   max-height: 90vh;
-}
-.card-holder {
-  background: #bcc8c1;
-  height: auto;
-  border-radius: 4px;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+.explanation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.expand-button {
+  margin: 1.6rem;
+  margin-bottom: .5rem;
+  width: 100px;
+}
+.explanation-close {
+  height: 0;
+  opacity: 0;
+  transition: .3s;
+}
+.explanation-open {
+  height: 300px;
+  opacity: 1;
+  transition: .3s;
 }
 p {
   padding: 10px;
 }
 
 @media (max-width: 580px) {
-  .card-holder {
+  .picture-container {
     align-self: center;
     justify-self: center;
     font-size: 0.9rem;
     margin: 1rem;
-    width: 300px;
+    width: 450px;
   }
 }
