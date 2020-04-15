@@ -1,8 +1,20 @@
 import React, { useState } from "react";
 
 const PictureCard = pic => {
-    console.log(pic)
+    var dateStr = pic.pic.date;
+
+
     const [hide, setHide] = useState(true);
+    const formatDate = (str='') =>{
+        if (str === ''){
+            return 'loading...'
+        }else{
+        let arr = str.split('-');
+        return arr[1] + '-' + arr[2] + '-' + arr[0]
+        }
+        
+    }
+    if (!pic.pic.url) return <h3>Loading...</h3>;
     return (
         <div className="picture-container">
             <div className="picture-title">
@@ -10,7 +22,9 @@ const PictureCard = pic => {
             </div>
             <div className="picture-nav">
               
-                <div className="picture-date">{pic.pic.date}</div>
+                <div className="picture-date">
+                    <p>{formatDate(pic.pic.date)}</p>
+                </div>
                
             </div>
             <div className="picture-img">
