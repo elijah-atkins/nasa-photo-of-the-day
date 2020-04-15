@@ -1,6 +1,7 @@
 body {
 
-  background-image: linear-gradient(141deg, #25252b 0%, #141830 51%, #0b082e 75%);
+  background-image: linear-gradient(45deg, #25252b 0%, #47507e 51%, #03011a 75%);
+  background-size: 100% 200%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -23,7 +24,7 @@ code {
 }
 h1 {
   color: #fcfcfc;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   margin: 0;
   padding: 2rem;
@@ -64,7 +65,7 @@ p {
 }
 h2 {
   color: #fdfff1;
-  font-size: 2rem;
+  font-size: 1.6rem;
   background: #383652;
   margin: 0;
   padding: 20px;
@@ -86,7 +87,6 @@ button {
   display: grid;
   max-width: 90vw;
   max-height: 90vh;
-  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
 .explanation-container {
@@ -95,9 +95,17 @@ button {
   justify-content: flex-start;
   color: #060e16;
 }
+.explanation-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.copyright {
+  padding-right: 1rem;
+}
 .expand-button {
   margin: 1.6rem;
-  margin-bottom: .5rem;
+  margin-bottom: 0px;
   width: 100px;
 }
 .explanation-close {
@@ -115,15 +123,24 @@ button {
 
 
 @media (max-width: 580px) {
+  .picture-card {
+    margin: 1rem;
+  }
   .picture-container {
     align-self: center;
     justify-self: center;
     font-size: 0.9rem;
-    margin: 1rem;
-    width: 450px;
+    margin: 0;
+    width: 90vw;
   }
   .picture {
-    width: 450px;
+    width:100%;
+  }
+  .logo-container {
+    justify-content: space-around;
+  }
+  .logo-container h1{
+    font-size: 2rem;
   }
   .logo img {
     height: 150px;

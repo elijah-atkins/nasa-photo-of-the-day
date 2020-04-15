@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 
 const PictureCard = pic => {
-    const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     const [hide, setHide] = useState(true);
     const getDate = (num) => {
-        if (num % 10 === 1) {
+        if (num % 10 === 1 && num !== 11) {
             return `${num}st`
-        }else if(num % 10 === 2) {
+        }else if(num % 10 === 2 && num !== 12) {
             return `${num}nd`
-        }else if(num % 10 === 3) {
+        }else if(num % 10 === 3 && num !== 13) {
             return `${num}rd`
         }else{
             return `${num}th`
         }
     }
     const formatDate = (str='') =>{
-        let arr = str.split('-').map(Number);
-        return `The ${getDate(arr[2])} of ${months[arr[1]-1]}, ${arr[0]}`
+        const dateArr = str.split('-').map(Number);
+        return `The ${getDate(dateArr[2])} of ${months[dateArr[1]-1]}, ${dateArr[0]}`
         
         
     }
@@ -39,9 +39,14 @@ const PictureCard = pic => {
                 </a>
             </div>
             <div className="explanation-container">
-                <button className="expand-button" onClick={() =>{
-                    setHide(!hide)
-                }}>Explanation</button>
+                <div className="explanation-header">
+                    <button className="expand-button" onClick={() =>{
+                        setHide(!hide)
+                    }}>Explanation</button>
+                    <div className="copyright">
+                <p>Copyright: {pic.pic.copyright}</p>
+                    </div>
+                </div>
                 <div className={
                     hide ? 'explanation-close' : 'explanation-open'
                 }>
