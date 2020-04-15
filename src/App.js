@@ -14,7 +14,7 @@ function App() {
         <h1>Astronomy Picture of the Day</h1>
         </div>
       </div>
-      <PictureGet />
+      <PictureGet date={"2020-04-14"}/>
     </div>
   );
 }

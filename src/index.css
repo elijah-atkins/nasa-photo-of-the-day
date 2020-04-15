@@ -37,7 +37,7 @@ p {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background: rgba(98, 101, 189, 0.15);
+  background: rgba(255, 255, 255, 0.15);
 }
 
 .app-card {
@@ -56,7 +56,7 @@ p {
  
   margin: 2rem;
   
-  background: #c2c3d3;
+  background: rgba(194, 195, 211, 0.8);
   border-radius: 3px;
   box-shadow: 6px 6px 9px 8px rgba(255, 255, 255, 0.05), 0 11px 21px rgba(255, 147, 251, 0.08);
 }
@@ -134,6 +134,7 @@ button {
   }
   .picture {
     max-width: 95vw;
+    max-height: 100vh;
   }
   .logo-container {
     justify-content: space-around;
