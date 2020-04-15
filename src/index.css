@@ -1,6 +1,6 @@
 body {
 
-  background-image: linear-gradient(45deg, #25252b 0%, #47507e 51%, #03011a 75%);
+  background-image: linear-gradient(37deg, #25252b 0%, #47507e 51%, #03011a 75%);
   background-size: 120% 200%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -17,8 +17,8 @@ code {
 
 
 #root {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   color: #eeedea;
   margin: 0;
 }
@@ -54,23 +54,22 @@ p {
 }
 .picture-container {
  
-  margin: 1rem;
+  margin: 2rem;
   
   background: #c2c3d3;
-
   border-radius: 7px;
-  box-shadow: 6px 6px 9px 8px rgba(255, 255, 255, 0.04), 0 15px 12px rgba(255, 147, 251, 0.04);
+  box-shadow: 6px 6px 9px 8px rgba(255, 255, 255, 0.05), 0 11px 21px rgba(255, 147, 251, 0.08);
 }
 .picture-nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 3rem;
+
 }
 h2 {
-  color: #fdfff1;
+  color: #c2c3d3;
   font-size: 1.6rem;
-  background: #383652;
+  background: rgba(56, 54, 82);
   margin: 0;
   padding: 20px;
 }
@@ -89,9 +88,9 @@ button {
 
 .picture {
   display: grid;
-  max-width: 85vw;
+  max-width: 90vw;
   max-height: 95vh;
-  box-shadow: 6px 10px 10px 12px rgba(0, 0, 0, 0.1), 0 15px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 6px 10px 10px 12px rgba(0, 0, 0, 0.1), 0 7px 12px rgba(0, 0, 0, 0.2);
 
 }
 
