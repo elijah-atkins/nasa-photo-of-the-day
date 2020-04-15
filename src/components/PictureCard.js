@@ -4,11 +4,11 @@ const PictureCard = pic => {
     const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     const [hide, setHide] = useState(true);
     const getDate = (num) => {
-        if (num === 1 || num === 21 || num === 31) {
+        if (num % 10 === 1) {
             return `${num}st`
-        }else if(num === 2 || num === 22) {
+        }else if(num % 10 === 2) {
             return `${num}nd`
-        }else if(num === 3 || num === 23) {
+        }else if(num % 10 === 3) {
             return `${num}rd`
         }else{
             return `${num}th`
