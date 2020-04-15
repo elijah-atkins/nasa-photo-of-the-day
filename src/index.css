@@ -57,7 +57,7 @@ p {
   margin: 2rem;
   
   background: #c2c3d3;
-  border-radius: 7px;
+  border-radius: 3px;
   box-shadow: 6px 6px 9px 8px rgba(255, 255, 255, 0.05), 0 11px 21px rgba(255, 147, 251, 0.08);
 }
 .picture-nav {
@@ -128,7 +128,13 @@ button {
 
 
 @media (max-width: 580px) {
-
+  .picture-container{
+    margin: 0;
+    width: 100vw;
+  }
+  .picture {
+    max-width: 95vw;
+  }
   .logo-container {
     justify-content: space-around;
   }
