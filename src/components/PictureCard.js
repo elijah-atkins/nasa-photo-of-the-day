@@ -3,15 +3,23 @@ import React, { useState } from "react";
 const PictureCard = pic => {
     var dateStr = pic.pic.date;
 
-
+    const months = ["January", "Febuary", "Marh", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     const [hide, setHide] = useState(true);
-    const formatDate = (str='') =>{
-        if (str === ''){
-            return 'loading...'
+    const getDate = (num) => {
+        if (num === 1) {
+            return '1st'
+        }else if(num === 2) {
+            return '2nd'
+        }else if(num === 3) {
+            return '3rd'
         }else{
-        let arr = str.split('-');
-        return arr[1] + '-' + arr[2] + '-' + arr[0]
+            return `${num}th`
         }
+    }
+    const formatDate = (str='') =>{
+        let arr = str.split('-').map(Number);
+        return `The ${getDate(arr[2])} of ${months[arr[1]-1]}, ${arr[0]}`
+        
         
     }
     if (!pic.pic.url) return <h3>Loading...</h3>;

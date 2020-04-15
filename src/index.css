@@ -34,7 +34,7 @@ p {
 .logo-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   background: rgba(98, 101, 189, 0.15);
 }
@@ -68,6 +68,9 @@ h2 {
   background: #383652;
   margin: 0;
   padding: 20px;
+}
+button {
+  border-radius: 5px;
 }
 .logo img{
   padding-left: 2rem;
