@@ -23,7 +23,7 @@ code {
   margin: 0;
 }
 h1 {
-  color: #fcfcfc;
+  color: #dddddd;
   font-size: 2.5rem;
   text-align: center;
   margin: 0;
@@ -39,7 +39,12 @@ p {
   align-items: center;
   background: rgba(255, 255, 255, 0.15);
 }
-
+.calendar-container {
+  margin-left: 2.5rem;
+}
+.calendar button {
+  border-radius: 0px;
+}
 .app-card {
   display: flex;
   align-content: center;
@@ -120,7 +125,7 @@ button {
   padding: 1rem;
 }
 .explanation-open {
-  height: 350px;
+  height: 450px;
   opacity: 1;
   transition: .3s;
   padding: 1rem;
