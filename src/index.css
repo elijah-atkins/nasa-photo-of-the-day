@@ -42,6 +42,7 @@ p {
 .calendar-container {
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
 }
 
 .app-card {
@@ -118,12 +119,14 @@ button {
   width: 100px;
 }
 .explanation-close {
+  text-align: left;
   transition: .3s;
   padding: 1rem;
   transform:scaleY(0);
   max-height: 0;
 }
 .explanation-open {
+  text-align: left;
   height: auto;
   transform:scaleY(1);
   max-height: 400px;
@@ -136,6 +139,9 @@ button {
   .picture-container{
     margin: 0;
     width: 100vw;
+  }
+  .calendar-container {
+    margin-top: 0rem;
   }
   .picture {
     max-width: 95vw;
