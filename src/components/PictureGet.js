@@ -3,12 +3,13 @@ import axios from "axios";
 import PictureCard from "./PictureCard"
 
 const PictureGet = (props) => {
-    console.log(props.date)
+    console.log(!props.date)
     const [pic, setPic] = useState([]);
     const [date, setDate] = useState(props.date)
+    let url = `https://api.nasa.gov/planetary/apod?api_key=p4C0QgA2Ec5R5E8oVlU5rXuLbdexPLk59gypoEGM&date=${date}`
     useEffect(() => {
         axios
-        .get(`https://api.nasa.gov/planetary/apod?api_key=p4C0QgA2Ec5R5E8oVlU5rXuLbdexPLk59gypoEGM&date=${date}`)
+        .get(url)
         .then(response => {
             setPic(response.data)
             console.log(response.data)

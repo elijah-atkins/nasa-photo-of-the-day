@@ -44,7 +44,7 @@ const PictureCard = pic => {
                         setHide(!hide)
                     }}>Explanation</button>
                     <div className="copyright">
-                <p>Copyright: {pic.pic.copyright}</p>
+                <p>{pic.pic.copyright}</p>
                     </div>
                 </div>
                 <div className={
