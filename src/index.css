@@ -121,7 +121,7 @@ button {
 .explanation-close {
   text-align: left;
   transition: .3s;
-  padding: 1rem;
+  margin: 2rem;
   transform:scaleY(0);
   max-height: 0;
 }
@@ -131,7 +131,7 @@ button {
   transform:scaleY(1);
   max-height: 400px;
   transition: .3s;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 

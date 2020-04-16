@@ -19,7 +19,7 @@ const PictureGet = (props) => {
         .get(`https://api.nasa.gov/planetary/apod?api_key=p4C0QgA2Ec5R5E8oVlU5rXuLbdexPLk59gypoEGM&date=${dateToString(date)}`)
         .then(response => {
             setPic(response.data)
-            console.log(response.data)
+    //        console.log(response.data)
         })
         .catch(error => console.log("Error!", error))
     }, [date]);
@@ -29,7 +29,7 @@ const PictureGet = (props) => {
                 <Calendar
     
                     value={date}
-                    minDate={new Date(1995, 5, 16)}
+                    minDate={new Date('1995-6-16')}
                     maxDate={new Date()}
                     onClickDay={dayValue}
                 />
