@@ -15,7 +15,8 @@ function App() {
         <h1>Astronomy Picture of the Day</h1>
         </div>
       </div>
-      <PictureGet date={"2005-06-16"}/>
+
+      <PictureGet />
     </div>
   );
 }

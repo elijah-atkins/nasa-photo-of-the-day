@@ -40,11 +40,10 @@ p {
   background: rgba(255, 255, 255, 0.15);
 }
 .calendar-container {
-  margin-left: 2.5rem;
+  display: flex;
+  justify-content: center;
 }
-.calendar button {
-  border-radius: 0px;
-}
+
 .app-card {
   display: flex;
   align-content: center;
@@ -119,14 +118,15 @@ button {
   width: 100px;
 }
 .explanation-close {
-  height: 0;
-  opacity: 0;
   transition: .3s;
   padding: 1rem;
+  transform:scaleY(0);
+  max-height: 0;
 }
 .explanation-open {
-  height: 450px;
-  opacity: 1;
+  height: auto;
+  transform:scaleY(1);
+  max-height: 400px;
   transition: .3s;
   padding: 1rem;
 }

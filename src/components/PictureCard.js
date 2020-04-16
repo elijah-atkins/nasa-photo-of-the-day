@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import PicturePick from "./PicturePick"
 
 const PictureCard = pic => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -51,7 +50,6 @@ const PictureCard = pic => {
                 <div className={
                     hide ? 'explanation-close' : 'explanation-open'
                 }>
-                    <PicturePick />
                     <p>{pic.pic.explanation}</p>
                 </div>
             </div>
