@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 
 const PictureCard = pic => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -41,12 +42,11 @@ const PictureCard = pic => {
                 </a>
             </div>
             }
-            {mediaType !== 'image' &&
-            <div className="not-picture">
-                <p>{pic.pic.media_type.charAt(0).toUpperCase() + pic.pic.media_type.slice(1)}</p>
-                <a href={pic.pic.url}>
-                {pic.pic.title} 
-                </a>
+            {mediaType === 'video' &&
+            <div className="embed-container">
+                <iframe src={pic.pic.url} frameborder="0" allowfullscreen>
+
+                </iframe>
             </div>
             }
             <div className="explanation-container">
@@ -54,9 +54,10 @@ const PictureCard = pic => {
                     <button className="expand-button" onClick={() =>{
                         setHide(!hide)
                     }}>Explanation</button>
+                    {pic.pic.copyright !== undefined &&
                     <div className="copyright">
-                <p>{pic.pic.copyright}</p>
-                    </div>
+                <p>Copyright: {pic.pic.copyright}</p>
+                    </div>}
                 </div>
                 <div className={
                     hide ? 'explanation-close' : 'explanation-open'
