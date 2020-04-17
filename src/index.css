@@ -151,13 +151,16 @@ button {
   display: flex;
   flex-direction: column;
 }
+
 @media (max-width: 580px) {
+
   .picture-container{
     margin: 0;
     width: 100vw;
   }
+
   .calendar-container {
-    margin-top: 0rem;
+    margin-top: 0.5rem;
   }
   .picture {
     max-width: 95vw;

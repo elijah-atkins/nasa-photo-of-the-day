@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PictureCard from "./PictureCard"
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+
 
 const PictureGet = (props) => {
 
