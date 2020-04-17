@@ -147,6 +147,10 @@ button {
   width: 90%; 
   height: 100%; 
 }
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 580px) {
   .picture-container{
     margin: 0;
@@ -165,7 +169,7 @@ button {
   .logo-container h1{
     font-size: 2rem;
   }
-  .logo img {
-
+  .content-container {
+    flex-direction: column-reverse;
   }
 }

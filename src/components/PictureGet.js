@@ -24,7 +24,7 @@ const PictureGet = (props) => {
         .catch(error => console.log("Error!", error))
     }, [date]);
     return (
-        <div>
+        <div className="content-container">
             <div className="calendar-container">
                 <Calendar
     
