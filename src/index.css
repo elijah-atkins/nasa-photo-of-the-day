@@ -1,4 +1,7 @@
 body {
+
+  background-image: linear-gradient(37deg, #25252b 0%, #47507e 51%, #03011a 75%);
+  background-size: 120% 200%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,4 +13,163 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+#root {
+  width: 100%;
+  height: 100%;
+  color: #eeedea;
+  margin: 0;
+}
+h1 {
+  color: #dddddd;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 0;
+  padding: 2rem;
+}
+p {
+  color: #0b082e;
+}
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+}
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.app-card {
+  display: flex;
+  align-content: center;
+}
+.picture-date {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.picture-card {
+  display: flex;
+  justify-content: center;
+}
+.picture-container {
+ 
+  margin: 2rem;
+  
+  background: rgba(194, 195, 211, 0.8);
+  border-radius: 3px;
+  box-shadow: 6px 6px 9px 8px rgba(255, 255, 255, 0.05), 0 11px 21px rgba(255, 147, 251, 0.08);
+}
+.picture-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+h2 {
+  color: #c2c3d3;
+  font-size: 1.6rem;
+  background: rgba(56, 54, 82);
+  margin: 0;
+  padding: 20px;
+}
+button {
+  border-radius: 5px;
+}
+.logo img{
+  padding-left: 2rem;
+  height: 200px;
+
+}
+.picture-img {
+  display: flex;
+  justify-content: center;
+}
+
+.picture {
+  display: grid;
+  max-width: 90vw;
+  max-height: 95vh;
+  box-shadow: 6px 10px 10px 12px rgba(0, 0, 0, 0.1), 0 7px 12px rgba(0, 0, 0, 0.2);
+
+}
+
+.explanation-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #060e16;
+}
+.explanation-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.copyright {
+  padding-right: 1rem;
+}
+.expand-button {
+  margin: 1.6rem;
+  margin-bottom: 0px;
+  width: 100px;
+}
+.explanation-close {
+  text-align: left;
+  transition: .3s;
+  margin: 2rem;
+  transform:scaleY(0) translateY(-100px);
+  max-height: 0;
+}
+.explanation-open {
+  text-align: left;
+  height: auto;
+  transform:scaleY(1) translateY(0px);
+
+  max-height: 450px;
+  transition: .3s;
+  padding: 2rem;
+}
+.video-container { 
+  position: relative; 
+  padding-bottom: 56.25%; 
+  height: 0; overflow: 
+  hidden; max-width: 100%; 
+} 
+.video-container iframe, .embed-container object, .embed-container embed { 
+  position: absolute; 
+  top: 0; 
+  left: 5%; 
+  width: 90%; 
+  height: 100%; 
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 580px) {
+  .picture-container{
+    margin: 0;
+    width: 100vw;
+  }
+  .calendar-container {
+    margin-top: 0rem;
+  }
+  .picture {
+    max-width: 95vw;
+    max-height: 100vh;
+  }
+  .logo-container {
+    justify-content: space-around;
+  }
+  .logo-container h1{
+    font-size: 2rem;
+  }
+  .content-container {
+    flex-direction: column-reverse;
+  }
 }

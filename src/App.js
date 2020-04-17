@@ -1,13 +1,22 @@
 import React from "react";
 import "./App.css";
+import PictureGet from "./components/PictureGet";
+
+import Logo from "./img/NASA_logo_alt.svg"
 
 function App() {
   return (
     <div className="App">
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun 🚀!
-      </p>
+      <div className="header logo-container">
+        <div className="logo">
+          <img alt="NASA Logo" src={Logo}></img>
+        </div>
+        <div className="logo-header">
+
+        </div>
+      </div>
+
+      <PictureGet />
     </div>
   );
 }
