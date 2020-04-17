@@ -2,6 +2,8 @@ body {
 
   background-image: linear-gradient(37deg, #25252b 0%, #47507e 51%, #03011a 75%);
   background-size: 120% 200%;
+  background-image: linear-gradient(37deg, #25252b 0%, #47507e 51%, #03011a 75%);
+  background-color: #25252b;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -19,6 +21,7 @@ code {
 #root {
   width: 100%;
   height: 100%;
+  background-image: linear-gradient(37deg, #25252b 0%, #47507e 51%, #03011a 75%);
   color: #eeedea;
   margin: 0;
 }
@@ -128,9 +131,9 @@ button {
 .explanation-open {
   text-align: left;
   height: auto;
-  transform:scaleY(1) translateY(0px);
+  transform:scaleY(1) translateY(-10px);
 
-  max-height: 450px;
+  max-height: 500px;
   transition: .3s;
   padding: 2rem;
 }
@@ -161,7 +164,9 @@ button {
 
   .calendar-container {
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
+
   .picture {
     max-width: 95vw;
     max-height: 100vh;

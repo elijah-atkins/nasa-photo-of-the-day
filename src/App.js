@@ -1,5 +1,5 @@
 import React from "react";
-import "react-calendar/dist/Calendar.css";
+import "./Calendar.css";
 import "./App.css";
 import PictureGet from "./components/PictureGet";
 
