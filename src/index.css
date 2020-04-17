@@ -89,8 +89,27 @@ h2 {
   margin: 0;
   padding: 20px;
 }
-button {
-  border-radius: 5px;
+.expand-button {
+  cursor: pointer;
+  background: rgb(56,54,82);
+  color: #c2c2d3;
+  width: 35px;
+  height: 35px;
+  border: 3px solid #c2c2d3;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 2rem;
+  margin-top: 2rem;
+
+}
+.expand-btn-up {
+  transform: rotate(-90deg);
+  transition: 0.3s;
+}
+
+.expand-btn-down {
+  transform: rotate(0);
+  transition: 0.3s;
 }
 .logo img{
   padding-left: 2rem;
@@ -124,11 +143,7 @@ button {
 .copyright {
   padding-right: 1rem;
 }
-.expand-button {
-  margin: 1.6rem;
-  margin-bottom: 0px;
-  width: 100px;
-}
+
 .explanation-close {
   text-align: left;
   transition: .3s;

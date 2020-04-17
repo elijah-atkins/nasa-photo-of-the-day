@@ -28,7 +28,7 @@ const PictureGet = (props) => {
         <div className="content-container">
             <div className="calendar-container">
                 <div className="big-logo">
-                    <img src={log} alt="NASA "></img>
+                    <img src={log} alt="NASA Astronomy Picture of the Day"></img>
                 </div>
                 <Calendar
     
