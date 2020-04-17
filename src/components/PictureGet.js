@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PictureCard from "./PictureCard"
 import Calendar from 'react-calendar';
-import 'react-calendar/dist/Calendar.css';
+import log from '../img/NASA_logo_alt.svg'
+
 
 const PictureGet = (props) => {
 
@@ -26,6 +27,9 @@ const PictureGet = (props) => {
     return (
         <div className="content-container">
             <div className="calendar-container">
+                <div className="big-logo">
+                    <img src={log} alt="NASA Astronomy Picture of the Day"></img>
+                </div>
                 <Calendar
     
                     value={date}

@@ -50,9 +50,9 @@ const PictureCard = pic => {
             }
             <div className="explanation-container">
                 <div className="explanation-header">
-                    <button className="expand-button" onClick={() =>{
+                    <button className={`expand-button ${hide ? 'expand-btn-up' : 'expand-btn-down'}`} onClick={() =>{
                         setHide(!hide)
-                    }}>Explanation</button>
+                    }}>&nabla;</button>
                     {pic.pic.copyright !== undefined &&
                     <div className="copyright">
                 <p>Copyright: {pic.pic.copyright}</p>
