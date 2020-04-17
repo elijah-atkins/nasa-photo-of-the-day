@@ -36,15 +36,22 @@ p {
   color: #0b082e;
 }
 .logo-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.15);
+  display: none;
+}
+.big-logo {
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  max-width: 50%;
+}
+
+.big-logo img {
+
+  height: 100%;
 }
 .calendar-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin: 2rem;
   margin-bottom: 0;
 }
@@ -155,8 +162,23 @@ button {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 1000px){
+  .big-logo img {
 
-@media (max-width: 580px) {
+    width: 100%;
+  }
+}
+@media (max-width: 730px) {
+  .big-logo {
+    display: none;
+  }
+  .logo-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+  }
 
   .picture-container{
     margin: 0;
