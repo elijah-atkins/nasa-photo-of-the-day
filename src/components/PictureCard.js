@@ -43,6 +43,7 @@ const PictureCard = pic => {
             }
             {mediaType !== 'image' &&
             <div className="not-picture">
+                <p>{pic.pic.media_type.charAt(0).toUpperCase() + pic.pic.media_type.slice(1)}</p>
                 <a href={pic.pic.url}>
                 {pic.pic.title} 
                 </a>

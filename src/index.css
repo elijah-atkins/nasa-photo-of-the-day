@@ -129,7 +129,7 @@ button {
   text-align: left;
   height: auto;
   transform:scaleY(1);
-  max-height: 400px;
+  max-height: 450px;
   transition: .3s;
   padding: 2rem;
 }
