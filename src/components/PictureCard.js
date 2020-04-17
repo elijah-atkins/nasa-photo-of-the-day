@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const PictureCard = pic => {
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    const mediaType = pic.pic.media_type;
     const [hide, setHide] = useState(true);
     const getDate = (num) => {
         if (num % 10 === 1 && num !== 11) {
@@ -33,11 +34,20 @@ const PictureCard = pic => {
                 </div>
                
             </div>
+            {mediaType === 'image' &&
             <div className="picture-img">
                 <a href={pic.pic.hdurl}>
                 <img className="picture" alt={pic.pic.title} src={pic.pic.url}></img>
                 </a>
             </div>
+            }
+            {mediaType !== 'image' &&
+            <div className="not-picture">
+                <a href={pic.pic.url}>
+                {pic.pic.title} 
+                </a>
+            </div>
+            }
             <div className="explanation-container">
                 <div className="explanation-header">
                     <button className="expand-button" onClick={() =>{

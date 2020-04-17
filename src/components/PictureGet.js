@@ -19,7 +19,7 @@ const PictureGet = (props) => {
         .get(`https://api.nasa.gov/planetary/apod?api_key=p4C0QgA2Ec5R5E8oVlU5rXuLbdexPLk59gypoEGM&date=${dateToString(date)}`)
         .then(response => {
             setPic(response.data)
-    //        console.log(response.data)
+            console.log(response.data)
         })
         .catch(error => console.log("Error!", error))
     }, [date]);
