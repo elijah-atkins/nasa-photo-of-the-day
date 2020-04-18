@@ -21,7 +21,7 @@ const PictureCard = pic => {
         
         
     }
-    if (!pic.pic.url) return <h3 class="blinking">Loading...</h3>;
+    if (!pic.pic.url) return <h3 className="blinking">Loading...</h3>;
     return (
         <div className="picture-container">
             <div className="picture-title">

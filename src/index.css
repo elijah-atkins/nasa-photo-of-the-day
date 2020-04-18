@@ -230,7 +230,7 @@ h2 {
 }
 @keyframes blinkingText{
   0%{     color: #fff;    }
-  49%{    color: #aaa; }
+  49%{    color: #fff; }
   60%{    color: transparent; }
   99%{    color:transparent;  }
   100%{   color: #fff;    }
