@@ -98,7 +98,7 @@ h2 {
   height: 40px;
   border: 3px solid #c2c2d3;
   border-radius: 50%;
-  padding: 4px;
+
   margin-left: 3rem;
   margin-top: 1rem;
   box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.15);
@@ -223,4 +223,15 @@ h2 {
   .content-container {
     flex-direction: column-reverse;
   }
+}
+
+.blinking{
+  animation:blinkingText 1.2s infinite;
+}
+@keyframes blinkingText{
+  0%{     color: #fff;    }
+  49%{    color: #fff; }
+  60%{    color: transparent; }
+  99%{    color:transparent;  }
+  100%{   color: #fff;    }
 }
