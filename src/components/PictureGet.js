@@ -21,7 +21,7 @@ const PictureGet = (props) => {
         .then(response => {
             setPic(response.data)
         })
-        .catch(error => alert(`Error ${error}, Please try again later, or try selecting a different day`))
+        .catch(error => alert(`${error}, Please try again later, or try selecting a different day`))
     }, [date]);
     return (
         <div className="content-container">
