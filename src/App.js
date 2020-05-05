@@ -1,8 +1,9 @@
 import React from "react";
+import { Route, Switch } from 'react-router-dom';
 import "./Calendar.css";
 import "./App.css";
 import PictureGet from "./components/PictureGet";
-
+import PictureArchive from "./components/PictureArchive"
 import Logo from "./img/NASA_logo_alt.svg"
 
 function App() {
@@ -17,7 +18,16 @@ function App() {
         </div>
       </div>
 
-      <PictureGet />
+
+      <Switch>
+        <Route path ="/:id">
+     
+        <PictureArchive />
+        </Route>
+        <Route path ="/">
+          <PictureGet />
+        </Route>
+      </Switch>
     </div>
   );
 }
