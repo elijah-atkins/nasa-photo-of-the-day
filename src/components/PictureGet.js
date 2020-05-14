@@ -3,14 +3,16 @@ import axios from "axios";
 import PictureCard from "./PictureCard"
 import Calendar from 'react-calendar';
 import log from '../img/NASA_logo_alt.svg'
-import { Link, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 const PictureGet = (props) => {
-    console.log(props)
+
     const { push, goBack } = useHistory();
+    console.log(push)
     const [pic, setPic] = useState([]);
     const [date, setDate] = useState(new Date())
+
     const dateToString = day =>{
         return `${day.getFullYear()}-${day.getMonth()+1}-${day.getDate()}`
     }

@@ -2,7 +2,7 @@ import React from "react";
 import "./Calendar.css";
 import "./App.css";
 import PictureGet from "./components/PictureGet";
-import { Route, Link, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 
 
