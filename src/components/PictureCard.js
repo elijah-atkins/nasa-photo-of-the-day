@@ -43,7 +43,7 @@ const PictureCard = pic => {
             }
             {mediaType === 'video' &&
             <div className="video-container">
-                <iframe src={pic.pic.url} frameborder="0" allowfullscreen>
+                <iframe title={pic.pic.title} src={pic.pic.url} frameborder="0" allowfullscreen>
 
                 </iframe>
             </div>
