@@ -3,10 +3,12 @@ import axios from "axios";
 import PictureCard from "./PictureCard"
 import Calendar from 'react-calendar';
 import log from '../img/NASA_logo_alt.svg'
+import { Link, useHistory } from 'react-router-dom';
 
 
 const PictureGet = (props) => {
-
+    console.log(props)
+    const { push, goBack } = useHistory();
     const [pic, setPic] = useState([]);
     const [date, setDate] = useState(new Date())
     const dateToString = day =>{
@@ -27,7 +29,7 @@ const PictureGet = (props) => {
         <div className="content-container">
             <div className="calendar-container">
                 <div className="big-logo">
-                    <img src={log} alt="NASA Astronomy Picture of the Day"></img>
+                    <img src={log} alt="NASA APOD"></img>
                 </div>
                 <Calendar
     
@@ -37,9 +39,11 @@ const PictureGet = (props) => {
                     onClickDay={dayValue}
                 />
             </div>
+
             <div className="picture-card">
                 <PictureCard pic={pic} date={date}/>
             </div>
+            <button onClick={() => goBack()}>Go Back</button>
 
         </div>
     )

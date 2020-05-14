@@ -23,7 +23,9 @@ const PictureCard = pic => {
     }
     if (!pic.pic.url) return <h3 className="blinking">Loading...</h3>;
     return (
+  
         <div className="picture-container">
+                    
             <div className="picture-title">
                 <h2>{pic.pic.title}</h2>
             </div>
@@ -43,7 +45,7 @@ const PictureCard = pic => {
             }
             {mediaType === 'video' &&
             <div className="video-container">
-                <iframe src={pic.pic.url} frameborder="0" allowfullscreen>
+                <iframe title={pic.pic.title} src={pic.pic.url} frameborder="0" allowfullscreen>
 
                 </iframe>
             </div>
