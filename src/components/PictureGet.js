@@ -42,7 +42,7 @@ const PictureGet = (props) => {
                 </div>
                 <Calendar
     
-                    value={date}
+
                     minDate={new Date('1995-6-16')}
                     maxDate={new Date()}
                     onClickDay={dayValue}

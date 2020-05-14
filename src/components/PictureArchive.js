@@ -26,7 +26,7 @@ const PictureArchive = (props) => {
 }
     useEffect(() => {
         const { id } = param;
-        console.log(id)
+
         axios
         .get(`https://api.nasa.gov/planetary/apod?api_key=p4C0QgA2Ec5R5E8oVlU5rXuLbdexPLk59gypoEGM&date=${id}`)
         .then(response => {
@@ -42,8 +42,7 @@ const PictureArchive = (props) => {
                     <img src={log} alt="NASA Astronomy of the Day"></img>
                 </div>
                 <Calendar
-    
-                    value={new Date(param.id)}
+
                     minDate={new Date('1995-6-16')}
                     maxDate={new Date()}
                     onClickDay={dayValue}
