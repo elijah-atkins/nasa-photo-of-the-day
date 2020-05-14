@@ -34,7 +34,7 @@ const PictureArchive = (props) => {
             setPic(response.data)
         })
         .catch(error => alert(`${error}, Please try again later, or try selecting a different day`))
-    }, [param.id]);
+    }, [param]);
     return (
         <div className="content-container">
             <div className="calendar-container">
