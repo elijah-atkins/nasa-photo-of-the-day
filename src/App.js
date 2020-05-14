@@ -1,9 +1,9 @@
 import React from "react";
+import { Route, Switch } from 'react-router-dom';
 import "./Calendar.css";
 import "./App.css";
 import PictureGet from "./components/PictureGet";
 import { Route, Link, Switch } from "react-router-dom";
-
 
 
 import Logo from "./img/NASA_logo_alt.svg"
@@ -30,6 +30,7 @@ function App() {
       <PictureGet date={new Date()}/>
       </Route>
     </Switch>
+
     </div>
 
   );
