@@ -34,7 +34,7 @@ const PictureArchive = (props) => {
             setPic(response.data)
         })
         .catch(error => alert(`${error}, Please try again later, or try selecting a different day`))
-    }, [param.id]);
+    }, [param.id, param]);
     return (
         <div className="content-container">
             <div className="calendar-container">
@@ -42,8 +42,7 @@ const PictureArchive = (props) => {
                     <img src={log} alt="NASA Astronomy of the Day"></img>
                 </div>
                 <Calendar
-    
-                    value={new Date(param.id)}
+
                     minDate={new Date('1995-6-16')}
                     maxDate={new Date()}
                     onClickDay={dayValue}
