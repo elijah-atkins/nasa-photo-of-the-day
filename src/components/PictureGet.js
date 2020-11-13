@@ -6,7 +6,7 @@ import log from "../img/NASA_logo_alt.svg";
 import dateToString from "../util/dateToString";
 
 const PictureGet = (props) => {
-  const { goBack } = props
+
   const [pic, setPic] = useState([]);
   const [date, setDate] = useState(new Date());
   const dayValue = (day) => {
@@ -47,7 +47,7 @@ const PictureGet = (props) => {
       <div className="picture-card">
         <PictureCard pic={pic} key={date} />
       </div>
-      <button onClick={() => goBack()}>Go Back</button>
+
     </div>
   );
 };

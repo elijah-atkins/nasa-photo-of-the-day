@@ -44,6 +44,20 @@ p {
 .logo-container {
   display: none;
 }
+.back-button {
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  right: 40vw;
+  padding: 1rem;
+  background-color: #03011a;
+  border-radius: 6px;
+  border: solid 2px #c2c2d3;
+  font-size: calc(10px + 2vw);
+}
+.back-button:hover {
+  background-color: #47507e;
+}
 .big-logo {
   display: block;
   width: 100%;
@@ -186,13 +200,12 @@ h2 {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 1000px){
-  .big-logo img {
 
-    width: 100%;
+
+@media (max-width: 1000px) {
+  .back-button {
+    right: 0;
   }
-}
-@media (max-width: 730px) {
   .explanation-open {
     max-height: 1000px;
   }
