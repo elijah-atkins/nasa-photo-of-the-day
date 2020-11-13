@@ -21,10 +21,13 @@ function App() {
 
       <Switch>
         <Route path={"/:date"}>
-          <PictureArchive history={history} goBack={goBack} />
+          <div className="back-button" onClick={() => goBack()}>
+  {"<  "}Previous Image
+          </div>
+          <PictureArchive history={history} />
         </Route>
         <Route path="/">
-          <PictureGet history={history} goBack={goBack} />
+          <PictureGet history={history} />
         </Route>
       </Switch>
     </div>

@@ -44,6 +44,20 @@ p {
 .logo-container {
   display: none;
 }
+.back-button {
+  position: fixed;
+  cursor: pointer;
+  top: 0;
+  right: 40vw;
+  padding: 1rem;
+  background-color: #03011a;
+  border-radius: 6px;
+  border: solid 2px #c2c2d3;
+  font-size: calc(10px + 2vw);
+}
+.back-button:hover {
+  background-color: #47507e;
+}
 .big-logo {
   display: block;
   width: 100%;
@@ -107,7 +121,6 @@ h2 {
 
   margin-left: 3rem;
   margin-top: 1rem;
-  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.15);
 }
 .expand-btn-up {
   transform: rotate(-90deg);
@@ -130,6 +143,8 @@ h2 {
 }
 
 .picture {
+  position: relative;
+  z-index: 2;
   display: grid;
   max-width: 90vw;
   max-height: 95vh;
@@ -153,21 +168,25 @@ h2 {
 }
 
 .explanation-close {
+  position: relative;
+  z-index: -1;
   text-align: left;
-  transition: .3s;
-  margin: 2rem;
-  transform:scaleY(0) translateY(-100px);
+  transition: 0.3s;
+  margin: 0  calc(2rem + 10vw) 0  calc(2rem + 10vw);
+  opacity: 1;
+  transform:scaleY(1) translateY(-20rem);
   max-height: 0;
 }
 .explanation-open {
+  position: relative;
+  z-index: 0;
   text-align: left;
   height: auto;
+  opacity: 1;
   transform:scaleY(1) translateY(0px);
-
   max-height: 500px;
-  transition: .3s;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  transition: 0.3s;
+  margin: 0  calc(2rem + 10vw) 0  calc(2rem + 10vw);
 }
 .video-container { 
   position: relative; 
@@ -186,13 +205,12 @@ h2 {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 1000px){
-  .big-logo img {
 
-    width: 100%;
+
+@media (max-width: 1000px) {
+  .back-button {
+    right: 0;
   }
-}
-@media (max-width: 730px) {
   .explanation-open {
     max-height: 1000px;
   }

@@ -8,7 +8,6 @@ import dateToString from "../util/dateToString";
 
 const PictureArchive = (props) => {
   const param = useParams();
-  const { goBack } = props
   const [pic, setPic] = useState([]);
   const [date, setDate] = useState(new Date(param.date));
 
@@ -47,7 +46,6 @@ const PictureArchive = (props) => {
       <div className="picture-card">
         <PictureCard pic={pic} key={date} />
       </div>
-      <button onClick={() => goBack()}>Go Back</button>
     </div>
   );
 };
