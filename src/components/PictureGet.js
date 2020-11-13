@@ -7,10 +7,9 @@ import log from "../img/NASA_logo_alt.svg";
 import dateToString from "../util/dateToString";
 
 const PictureGet = (props) => {
-  const param = useParams();
   const { goBack } = props
   const [pic, setPic] = useState([]);
-  const [date, setDate] = useState(new Date(param.date));
+  const [date, setDate] = useState(new Date());
   const dayValue = (day) => {
     const newDate = dateToString(day);
     props.history.push(`/${newDate}`);
