@@ -4,7 +4,7 @@ import "./Calendar.css";
 import "./App.css";
 import PictureGet from "./components/PictureGet";
 import PictureArchive from "./components/PictureArchive";
-
+import dateToString from './funcs/dateToString';
 import Logo from "./img/NASA_logo_alt.svg";
 
 function App() {
@@ -22,10 +22,10 @@ function App() {
 
       <Switch>
         <Route path={"/:date"}>
-          <PictureArchive history={history} goBack={goBack} />
+          <PictureArchive dateToString={dateToString} history={history} goBack={goBack} />
         </Route>
         <Route path="/">
-          <PictureGet date={new Date()} history={history} goBack={goBack} />
+          <PictureGet dateToString={dateToString} date={new Date()} history={history} goBack={goBack} />
         </Route>
       </Switch>
     </div>

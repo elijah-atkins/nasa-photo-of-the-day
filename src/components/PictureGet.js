@@ -7,14 +7,6 @@ import log from "../img/NASA_logo_alt.svg";
 const PictureGet = (props) => {
   const [pic, setPic] = useState([]);
   const [date, setDate] = useState(new Date());
-  const dateToString = (day) => {
-    var y = day.getFullYear().toString();
-    var m = (day.getMonth() + 1).toString();
-    var d = day.getDate().toString();
-    d.length === 1 && (d = "0" + d);
-    m.length === 1 && (m = "0" + m);
-    return `${y}-${m}-${d}`;
-  };
   const dayValue = (day) => {
     const newDate = dateToString(day);
     props.history.push(`/${newDate}`);

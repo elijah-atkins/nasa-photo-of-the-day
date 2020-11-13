@@ -7,19 +7,12 @@ import { useParams } from "react-router-dom";
 
 const PictureArchive = (props) => {
   const param = useParams();
-  const dateToString = (day) => {
-    var y = day.getFullYear().toString();
-    var m = (day.getMonth() + 1).toString();
-    var d = day.getDate().toString();
-    d.length === 1 && (d = "0" + d);
-    m.length === 1 && (m = "0" + m);
-    return `${y}-${m}-${d}`;
-  };
+
   const [pic, setPic] = useState([]);
   const [date, setDate] = useState(new Date(param.date));
 
   const dayValue = (day) => {
-    const newDate = dateToString(day);
+    const newDate = props.dateToString(day);
     props.history.push(`/${newDate}`);
     setDate(day);
   };
