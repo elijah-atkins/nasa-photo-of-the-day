@@ -46,6 +46,7 @@ p {
 }
 .back-button {
   position: fixed;
+  z-index: 3;
   cursor: pointer;
   top: 0;
   right: 40vw;
@@ -54,6 +55,7 @@ p {
   border-radius: 6px;
   border: solid 2px #c2c2d3;
   font-size: calc(10px + 2vw);
+  
 }
 .back-button:hover {
   background-color: #47507e;
