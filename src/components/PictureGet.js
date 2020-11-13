@@ -3,10 +3,10 @@ import axios from "axios";
 import PictureCard from "./PictureCard";
 import Calendar from "react-calendar";
 import log from "../img/NASA_logo_alt.svg";
-import { useParams } from "react-router-dom";
 
-const PictureArchive = (props) => {
-  const param = useParams();
+const PictureGet = (props) => {
+  const [pic, setPic] = useState([]);
+  const [date, setDate] = useState(new Date());
   const dateToString = (day) => {
     var y = day.getFullYear().toString();
     var m = (day.getMonth() + 1).toString();
@@ -15,19 +15,17 @@ const PictureArchive = (props) => {
     m.length === 1 && (m = "0" + m);
     return `${y}-${m}-${d}`;
   };
-  const [pic, setPic] = useState([]);
-  const [date, setDate] = useState(new Date(param.date));
-
   const dayValue = (day) => {
     const newDate = dateToString(day);
     props.history.push(`/${newDate}`);
     setDate(day);
   };
   useEffect(() => {
-    const { date } = param;
     axios
       .get(
-        `https://api.nasa.gov/planetary/apod?api_key=p4C0QgA2Ec5R5E8oVlU5rXuLbdexPLk59gypoEGM&date=${date}`
+        `https://api.nasa.gov/planetary/apod?api_key=p4C0QgA2Ec5R5E8oVlU5rXuLbdexPLk59gypoEGM&date=${dateToString(
+          date
+        )}`
       )
       .then((response) => {
         setPic(response.data);
@@ -37,24 +35,27 @@ const PictureArchive = (props) => {
           `${error}, Please try again later, or try selecting a different day`
         )
       );
-  }, [param.id, param]);
+  }, [date]);
   return (
     <div className="content-container">
       <div className="calendar-container">
         <div className="big-logo">
-          <img src={log} alt="NASA Astronomy of the Day"></img>
+          <img src={log} alt="NASA APOD"></img>
         </div>
         <Calendar
+          value={date}
           minDate={new Date("1995-6-16")}
           maxDate={new Date()}
           onClickDay={dayValue}
         />
       </div>
+
       <div className="picture-card">
         <PictureCard pic={pic} key={date} />
       </div>
+      <button onClick={() => props.goBack()}>Go Back</button>
     </div>
   );
 };
 
-export default PictureArchive;
+export default PictureGet;
