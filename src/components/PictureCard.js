@@ -61,8 +61,8 @@ const PictureCard = (pic) => {
           <iframe
             title={pic.pic.title}
             src={pic.pic.url}
-            frameborder="0"
-            allowfullscreen
+            frameBorder="0"
+            allowFullScreen
           ></iframe>
         </div>
       )}

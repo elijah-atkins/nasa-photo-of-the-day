@@ -3,8 +3,7 @@ import { Route, Switch, useHistory } from "react-router-dom";
 import "./Calendar.css";
 import "./App.css";
 import PictureGet from "./components/PictureGet";
-import PictureArchive from "./components/PictureArchive";
-import dateToString from './funcs/dateToString';
+import PictureArchive from "./components/PictureArchive"
 import Logo from "./img/NASA_logo_alt.svg";
 
 function App() {
@@ -22,10 +21,10 @@ function App() {
 
       <Switch>
         <Route path={"/:date"}>
-          <PictureArchive dateToString={dateToString} history={history} goBack={goBack} />
+          <PictureArchive history={history} goBack={goBack} />
         </Route>
         <Route path="/">
-          <PictureGet dateToString={dateToString} date={new Date()} history={history} goBack={goBack} />
+          <PictureGet history={history} goBack={goBack} />
         </Route>
       </Switch>
     </div>

@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 import PictureCard from "./PictureCard";
 import Calendar from "react-calendar";
 import log from "../img/NASA_logo_alt.svg";
+import dateToString from "../util/dateToString";
 
 const PictureGet = (props) => {
+  const param = useParams();
+  const { goBack } = props
   const [pic, setPic] = useState([]);
-  const [date, setDate] = useState(new Date());
+  const [date, setDate] = useState(new Date(param.date));
   const dayValue = (day) => {
     const newDate = dateToString(day);
     props.history.push(`/${newDate}`);
@@ -45,7 +49,7 @@ const PictureGet = (props) => {
       <div className="picture-card">
         <PictureCard pic={pic} key={date} />
       </div>
-      <button onClick={() => props.goBack()}>Go Back</button>
+      <button onClick={() => goBack()}>Go Back</button>
     </div>
   );
 };

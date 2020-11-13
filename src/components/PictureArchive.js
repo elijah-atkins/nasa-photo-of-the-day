@@ -4,15 +4,16 @@ import PictureCard from "./PictureCard";
 import Calendar from "react-calendar";
 import log from "../img/NASA_logo_alt.svg";
 import { useParams } from "react-router-dom";
+import dateToString from "../util/dateToString";
 
 const PictureArchive = (props) => {
   const param = useParams();
-
+  const { goBack } = props
   const [pic, setPic] = useState([]);
   const [date, setDate] = useState(new Date(param.date));
 
   const dayValue = (day) => {
-    const newDate = props.dateToString(day);
+    const newDate = dateToString(day);
     props.history.push(`/${newDate}`);
     setDate(day);
   };
@@ -46,6 +47,7 @@ const PictureArchive = (props) => {
       <div className="picture-card">
         <PictureCard pic={pic} key={date} />
       </div>
+      <button onClick={() => goBack()}>Go Back</button>
     </div>
   );
 };
